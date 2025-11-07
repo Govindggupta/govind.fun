@@ -24,3 +24,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* GitHub Calendar overflow fix */
+.react-github-calendar {
+  max-width: 100% !important;
+  overflow-x: auto;
+}
+
+.react-github-calendar > svg {
+  max-width: 100%;
+  height: auto;
+}

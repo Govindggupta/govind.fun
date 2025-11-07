@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import GitHubCalendar from 'react-github-calendar';
+
 
 interface GitHubUser {
   login: string;
@@ -139,7 +141,7 @@ export default function GithubProfileCard() {
               {user.name || user.login}'s GitHub Activity Graph
             </h3>
             
-            <div className="w-full">
+            <div className="w-full mb-6">
               <a
                 href={`https://github.com/${user.login}`}
                 target="_blank"
@@ -155,6 +157,28 @@ export default function GithubProfileCard() {
                   unoptimized
                 />
               </a>
+            </div>
+
+            {/* GitHub Contribution Calendar */}
+            <div className="mt-6 pt-6 border-t border-[#30363d]">
+              <h4 className="text-sm font-semibold text-[#c9d1d9] mb-4">
+                Contribution Calendar
+              </h4>
+              <div className="w-full overflow-x-auto">
+                <div className="inline-block">
+                  <GitHubCalendar 
+                    username={user.login}
+                    blockSize={11}
+                    blockMargin={3}
+                    fontSize={10}
+                    theme={{
+                      light: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+                      dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+                    }}
+                    colorScheme="dark"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
