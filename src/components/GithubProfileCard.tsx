@@ -159,6 +159,7 @@ export default function GithubProfileCard() {
               </a>
             </div>
 
+
             {/* GitHub Contribution Calendar */}
             <div className="mt-6 pt-6 border-t border-[#30363d]">
               <h4 className="text-sm font-semibold text-[#c9d1d9] mb-4">
