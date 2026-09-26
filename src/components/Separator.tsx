@@ -2,6 +2,10 @@ import type { ClassValue } from "clsx";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+const cn = (...inputs: ClassValue[]) => {
+  return twMerge(clsx(inputs));
+};
+
 export function Separator({ className }: { className?: string }) {
   return (
     <div
@@ -22,8 +26,3 @@ export function Separator({ className }: { className?: string }) {
     />
   );
 }
-
-
-export const cn = (...inputs: ClassValue[]) => {
-  return twMerge(clsx(inputs));
-};

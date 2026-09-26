@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import GitHubCalendar from 'react-github-calendar';
 
-
 interface GitHubUser {
   login: string;
   name: string;
@@ -23,7 +22,6 @@ export default function GithubProfileCard() {
   const fullText = "Hi, I'm Govind Gupta ✌️";
 
   useEffect(() => {
-    // Animated typing effect
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
       if (currentIndex < fullText.length) {
@@ -34,11 +32,12 @@ export default function GithubProfileCard() {
       }
     }, 100);
 
-    // Fetch GitHub user data
-    fetch('https://api.github.com/users/govindggupta')
+    fetch('/api/github/user')
       .then(res => res.json())
       .then(data => {
-        setUser(data);
+        if (!data.error) {
+          setUser(data);
+        }
         setLoading(false);
       })
       .catch(err => {
@@ -138,7 +137,7 @@ export default function GithubProfileCard() {
           {/* Right Side - GitHub Activity Graph */}
           <div className="flex-1 bg-[#0d1117] border border-[#30363d] rounded-lg p-6">
             <h3 className="text-lg font-semibold text-[#c9d1d9] mb-4">
-              {user.name || user.login}'s GitHub Activity Graph
+              {user.name || user.login}&apos;s GitHub Activity Graph
             </h3>
             
             <div className="w-full mb-6">
@@ -187,4 +186,3 @@ export default function GithubProfileCard() {
     </div>
   );
 }
-
