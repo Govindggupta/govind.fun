@@ -1,22 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  output: "export",
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'avatars.githubusercontent.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'github.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'github-readme-activity-graph.vercel.app',
-      },
-    ],
+    // A static export can't run the on-demand Image Optimizer, so images are
+    // served as-is. remotePatterns are unnecessary while unoptimized.
     unoptimized: true,
   },
 };
