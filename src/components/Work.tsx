@@ -16,7 +16,7 @@ export default function Work({ repos }: Props) {
       title={
         <>
           Shipped &{' '}
-          <span className="font-serif font-normal italic text-[#39d353]">shipping</span>
+          <span className="font-mono font-normal italic text-[0.85em] text-[#39d353]">shipping</span>
         </>
       }
       intro="A few things I'm proud of — some live, some still cooking. Stars and languages come straight from GitHub."

@@ -32,7 +32,7 @@ export default function Journey({
       title={
         <>
           The road{' '}
-          <span className="font-serif font-normal italic text-[#39d353]">
+          <span className="font-mono font-normal italic text-[0.85em] text-[#39d353]">
             so far
           </span>
         </>
@@ -77,7 +77,7 @@ export default function Journey({
       <div className="mt-16 grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <h3 className="text-2xl font-semibold tracking-tight md:text-3xl" data-reveal>
           Milestones,{' '}
-          <span className="font-serif font-normal italic text-[#39d353]">
+          <span className="font-mono font-normal italic text-[0.85em] text-[#39d353]">
             loosely ordered
           </span>
         </h3>

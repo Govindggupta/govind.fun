@@ -47,7 +47,7 @@ export default function Hero({ user }: Props) {
               >
                 GOVIND
                 <br />
-                <span className="font-serif font-normal italic text-[#39d353]">
+                <span className="font-mono font-normal italic text-[#39d353]">
                   Gupta
                 </span>
               </h1>

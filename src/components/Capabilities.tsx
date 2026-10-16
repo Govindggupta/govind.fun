@@ -9,7 +9,7 @@ export default function Capabilities() {
       title={
         <>
           Things I{' '}
-          <span className="font-serif font-normal italic text-[#39d353]">build</span>
+          <span className="font-mono font-normal italic text-[0.85em] text-[#39d353]">build</span>
         </>
       }
       intro="Four lanes, one philosophy: understand the invisible layer, then make it useful."

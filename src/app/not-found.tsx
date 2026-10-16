@@ -9,7 +9,7 @@ export default function NotFound() {
         </p>
         <h1 className="mt-6 text-[clamp(2.5rem,8vw,6rem)] font-bold leading-[0.9] tracking-[-0.04em]">
           Nothing{' '}
-          <span className="font-serif font-normal italic text-[#39d353]">
+          <span className="font-mono font-normal italic text-[0.85em] text-[#39d353]">
             here
           </span>
         </h1>

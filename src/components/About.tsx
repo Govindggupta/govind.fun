@@ -39,7 +39,7 @@ export default function About({ user }: Props) {
       title={
         <>
           A developer in the making,{' '}
-          <span className="font-serif font-normal italic text-[#39d353]">
+          <span className="font-mono font-normal italic text-[0.85em] text-[#39d353]">
             since 2022
           </span>
         </>

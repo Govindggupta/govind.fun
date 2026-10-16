@@ -36,7 +36,7 @@ export default function Contact() {
           LET&apos;S BUILD
           <br />
           SOMETHING{' '}
-          <span className="font-serif font-normal italic text-[#39d353]">
+          <span className="font-mono font-normal italic text-[0.85em] text-[#39d353]">
             great
           </span>
         </h2>
